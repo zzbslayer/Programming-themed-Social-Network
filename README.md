@@ -1,18 +1,42 @@
-# Social Network of Programming
+# 程序社区
+## 项目简介
+* 建立一个以程序为主题的社区
+* 社区强调非程序员（非计算机与软件专业的）和程序员的互动
+## 项目灵感
+* facebook获得巨大成功在于，创意好，并且，执行好，才不至于创意被别人抢走。
+* 在社区这块，各类网站很多，微博、知乎，以及纯程序类的github，各类开发工具生态社区。
+* 而一个，重点在非程序员与程序员兼容，一个奇妙的交集的，这似乎是个空白区域
+* 现在写程序是一个趋势，可以说，任何一个专业的人都可能会需要写代码，但他们不一定吃这口饭
+* 于是，一个给非专业的人提供交流学习的平台，整合各类需求的社区构想，呼之欲出。
+## 主题方向
+### 一：非程序员
+* 侧重非程序员，提供非程序员需要的东西（学习资料？详细的解答？轻松的交流环境？专业的程序员的帮助？）
+* 关注问答机制，主页展示
+### 二：各一半
+* 非程序员与程序员各占一半
+* 提供程序员之间的交流平台
+* 提供项目展示
+### 三：主打社交
+* 考虑成为社交平台，而非纯粹的学习交流
+* 项目展示，项目交易，需求等互动
+### 四：校园app
+* 限制范围在校园内，关注交大学生的课业需求
+* 
 
-## A social-oriented instead of tech-oriented platform
-Unlike stackoverflow,ruby-china and many other platforms enabling programmers to seek for help or help others, this programming-themed platform aims at providing a better social contact for both programmers and laymen. It is a platform similar to Weibo and Twitter but programming-themed. You can post anything about programming on this platform.
-## Situation
+## 下一步进展
+### 一.实地调研
+#### 问题构想：
+##### 区分：
+1. 你是否写过代码？
+2. 你是否软件相关专业？
+##### 非程序：
+3. 你感觉写代码如何？（痛苦不堪、寸步难行？轻松愉快？需要帮助？是个不错的技能？）
+4. 你平时怎样解决程序上遇到的问题？（社区？朋友？老师？程序专业的朋友？能否效率很高？）
+5. 一个提供资料，提供问答的平台如何？
+##### 程序：
+6. 你是否乐意和别人交流问题？（帮助别人or寻求帮助）
+7. 你是否希望有一个平台展示自己的项目？
+8. 你是否有兴趣开发一个关于程序的社区？（加入我们）
 
-### Programmer can
+### 二.具体化项目、调整方向
 
-- Share the trifles they meet when studying or working
-- Post some insteresting and light-weighted project
-- Learn or post the latest news of programming
-- Raise small questions here but much more casually than in stackoverflow
-
-### Non-programmer can
- 
-- Have a approach to the programmers' world
-- Get started to programming
-- Learn the latest news of programming
