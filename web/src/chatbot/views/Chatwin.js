@@ -1,8 +1,15 @@
 /**
  * Created by Veiasai on 2017/12/13.
  */
-import react from 'react'
+import React from 'react'
 
-class Chatwin extends react.Component {
-
+class Chatwin extends React.Component {
+    render() {
+        return (
+            <div>
+            </div>
+            )
+    }
 }
+
+export default Chatwin;

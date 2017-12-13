@@ -1,21 +1,39 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+/**
+ * Created by Veiasai on 2017/12/13.
+ */
+import React from 'react';
+import {Nav, NavItem, Navbar} from 'react-bootstrap'
+import {view as Chatbot} from './chatbot'
+import {view as Home} from './Home'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
 
-export default App;
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom'
+
+const App = () => (
+
+    <Router>
+        <div>
+            <Navbar inverse >
+                <Navbar.Header>
+                    <Navbar.Brand>
+                        <a href="/">Programing</a>
+                    </Navbar.Brand>
+                    <Navbar.Toggle />
+                </Navbar.Header>
+                    <Nav>
+                        <NavItem eventKey={1} href="/home">Home</NavItem>
+                        <NavItem eventKey={2} href="/chatbot">Chatbot</NavItem>
+                    </Nav>
+            </Navbar>
+            <hr/>
+
+            <Route exact path="/home" component={Home}/>
+            <Route path="/chatbot" component={Chatbot}/>
+        </div>
+    </Router>
+);
+export default App

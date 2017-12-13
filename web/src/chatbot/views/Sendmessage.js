@@ -1,11 +1,17 @@
 /**
  * Created by Veiasai on 2017/12/13.
  */
-import react from 'react'
-import { FormGroup, ControlLabel, HelpBlock} from 'react-bootstrap'
+import React from 'react'
+import { FormGroup, ControlLabel, FormControl} from 'react-bootstrap'
+import {connect} from 'react-redux'
 import {sendMessage} from '../actions'
 
-class Sendmessage extends react.Component {
+class Sendmessage extends React.Component {
+    constructor(props,context){
+        super(props,context)
+        this.handleChange = this.handleChange.bind(this)
+        this.onSubmit = this.onSubmit.bind(this)
+    }
     onSubmit(ev) {
         ev.preventDefault();
         const inputValue = this.state.value;
@@ -19,11 +25,10 @@ class Sendmessage extends react.Component {
     render() {
         return (
             <form onSubmit={this.onSubmit}>
-                <FormGroup controlId="SENDMESSaGE">
+                <FormGroup controlId="SENDMESSAGE">
                     <ControlLabel>Send Message</ControlLabel>
                     <FormControl
                         type="text"
-                        value={this.state.value}
                         placeholder="Enter text"
                         onChange={this.handleChange}
                     />
@@ -41,3 +46,6 @@ const mapDispatchToProps = (dispatch) => {
         }
     }
 };
+
+export default connect(null, mapDispatchToProps)(Sendmessage);
+
