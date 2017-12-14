@@ -4,14 +4,15 @@
 import React from 'react'
 import Chatwin from './Chatwin'
 import Send from './Sendmessage'
+import {Grid} from 'react-bootstrap'
 
 const Chatbot = () => {
     return (
-        <div>
+        <Grid>
             <Chatwin/>
             <hr/>
             <Send/>
-        </div>
+        </Grid>
     )
 };
 

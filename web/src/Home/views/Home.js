@@ -1,10 +1,10 @@
 import React from 'react'
-
+import {Grid} from 'react-bootstrap'
 const Home = () => {
     return (
-        <div>
+        <Grid>
             <label>What the fuck</label>
-        </div>
+        </Grid>
     )
 };
 
