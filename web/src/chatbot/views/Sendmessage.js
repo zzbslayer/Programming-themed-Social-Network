@@ -8,7 +8,7 @@ import {sendMessage} from '../actions'
 
 class Sendmessage extends React.Component {
     constructor(props,context){
-        super(props,context)
+        super(props,context);
         this.handleChange = this.handleChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
     }
