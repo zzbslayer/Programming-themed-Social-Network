@@ -16,7 +16,7 @@ const App = () => (
     <Router>
         <div>
             <Navbar inverse >
-                <Navbar.Brand><a href="/">Programing</a></Navbar.Brand>
+                <Navbar.Brand><a href="/">Programming</a></Navbar.Brand>
                 <Navbar.Brand><Link to="/home">Home</Link></Navbar.Brand>
                 <Navbar.Brand><Link to="/chatbot">Chatbot</Link></Navbar.Brand>
             </Navbar>
