@@ -1,0 +1,48 @@
+.menu {
+	text-align: center;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.menuItem {
+	font-family: "Trebuchet MS", Arial, Verdana;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.docs {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+.docs > header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+.docs > nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+.docs > nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+#root > div > div > table > tbody > tr:nth-child(2) > td:nth-child(1) > table > tbody > tr:nth-child(1) > td > div > a {
+    text-decoration: none;
+}
+
+.docs > article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
