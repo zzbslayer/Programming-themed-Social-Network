@@ -12,8 +12,8 @@ const Sign = () => {
                 聊天机器人可以体验AI，祝您使用愉快。</h2>
             </Row>
             <Row style={{"text-align":"center"}}>
-                <Col md={6}><Button bsStyle="primary" bsSize="large">Sign in</Button></Col>
-                <Col md={6}><Button bsStyle="success" bsSize="large">Sign up</Button></Col>
+                <Col md={6} xs={6}><Button bsStyle="primary" bsSize="large">Sign in</Button></Col>
+                <Col md={6} xs={6}><Button bsStyle="success" bsSize="large">Sign up</Button></Col>
             </Row>
         </Grid>
     )
