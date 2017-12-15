@@ -5,7 +5,7 @@ import React from 'react';
 import {Navbar, Button, Grid, Col} from 'react-bootstrap'
 import {view as Sign} from './Sign'
 import {view as Chatbot} from './chatbot'
-import {view as Home} from './Home'
+import {view as Docs} from './Docs'
 import {
     BrowserRouter as Router,
     Route,
@@ -20,7 +20,7 @@ const App = () => (
                 <Grid>
                 <Col md={8}>
                     <Navbar.Brand><a href="/">Deep-learning</a></Navbar.Brand>
-                    <Navbar.Brand><Link to="/home">Docs</Link></Navbar.Brand>
+                    <Navbar.Brand><Link to="/docs">Docs</Link></Navbar.Brand>
                     <Navbar.Brand><Link to="/chatbot">Chatbot</Link></Navbar.Brand>
                 </Col>
                 <Col md={4}>
@@ -31,7 +31,7 @@ const App = () => (
                 </Grid>
             </Navbar>
             <hr/>
-            <Route path="/home" component={Home}/>
+            <Route path="/docs" component={Docs}/>
             <Route path="/chatbot" component={Chatbot}/>
             <Route exact path="/" component={Sign}/>
         </div>
