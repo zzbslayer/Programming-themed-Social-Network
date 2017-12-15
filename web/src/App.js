@@ -23,7 +23,6 @@ const App = () => (
                     <Navbar.Brand><Link to="/home">Docs</Link></Navbar.Brand>
                     <Navbar.Brand><Link to="/chatbot">Chatbot</Link></Navbar.Brand>
                 </Col>
-
                 <Col md={4}xs={12}>
                     <Navbar.Brand>
                     <InputGroup>
