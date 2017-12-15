@@ -1,6 +1,6 @@
 .Welcome {
     text-align:center;
-    font-weight:20;
+    font-weight: 100;
 
 }
 
@@ -8,6 +8,8 @@
     text-align:center;
     font-family: zFont2, 'zFont2';
 }
+
+
 @font-face
 {
     font-family:'zFont2';
