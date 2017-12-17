@@ -1,9 +1,21 @@
 import React from 'react'
-import {Table} from "react-bootstrap"
-import styles from "./Docs.css"
+import {Table, Grid} from "react-bootstrap"
+import Machinedocs from './Machinedocs'
+import Buildbot from './Buildbot'
+import Deeplearning from "./Deeplearning";
+import Tensorflow from "./Tensorflow";
+import {
+    Route,
+    Link
+} from 'react-router-dom'
+import Introduction from "./Introduction";
+import './Docs.css'
+
+
 const Docs = () => {
     return (
         <div class="docs">
+        <Grid>
         <Table striped condensed hover width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
             <tbody>
                 <tr>
@@ -13,28 +25,28 @@ const Docs = () => {
                                 <tr>
                                     <td>
                                         <div class="menu">
-                                            <a class="menuItem">Build a chatbot</a>
+                                            <Link to="/docs/buildbot" class="menuItem">Build a chatbot</Link>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <div class="menu">
-                                            <a class="menuItem">Machine Learning</a>
+                                            <Link to="/docs/machinelearning" class="menuItem">Machine Learning</Link>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <div class="menu">
-                                            <a class="menuItem">Deep Learning</a>
+                                            <Link to="/docs/deeplearning" class="menuItem">Deep Learning</Link>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <div class="menu">
-                                            <a class="menuItem">TensorFlow</a>
+                                            <Link to="/docs/tensorflow"  class="menuItem">TensorFlow</Link>
                                         </div>
                                     </td>
                                 </tr>
@@ -42,24 +54,18 @@ const Docs = () => {
                         </Table>
                     </td>
                     <td colspan="2">
-                        <Table striped condensed hover border="0" cellspacing="0" cellpadding="0" width="100%" height="100%">
-                            <tbody>
-                                <tr>
-                                    <td padding="10px" valign="top" align="left">
-                                        <h1>EZ AI</h1>
-                                        <p>I don't know what to put here.</p>
-                                        <p><a href="tutorial/machine-learning1.pptx" download="machine-learning1.pptx">machine learning1</a></p>
-                                        <p><a href="tutorial/machine-learning2.pdf" download="machine-learning2.pdf">machine learning2</a></p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </Table>
+                        <Route exact path="/docs" component={Introduction} />
+                        <Route path="/docs/buildbot" component={Buildbot} />
+                        <Route path="/docs/machinelearning" component={Machinedocs} />
+                        <Route path="/docs/deeplearning" component={Deeplearning} />
+                        <Route path="/docs/tensorflow" component={Tensorflow} />
                     </td>
                 </tr>
             </tbody>
         </Table>
-        <footer>Copyright &copy; zzbslayer.club
-        </footer>
+            <footer>Copyright &copy; zzbslayer.club
+            </footer>
+        </Grid>
         </div>
     )
 };
