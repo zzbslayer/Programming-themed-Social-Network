@@ -1,5 +1,5 @@
 import React from 'react'
-import {Table, Grid} from "react-bootstrap"
+import {Table, Grid, Panel,ListGroup , ListGroupItem, MenuItem} from "react-bootstrap"
 import Machinedocs from './Machinedocs'
 import Buildbot from './Buildbot'
 import Deeplearning from "./Deeplearning";
@@ -11,42 +11,51 @@ import {
 import Introduction from "./Introduction";
 import './Docs.css'
 
-
 const Docs = () => {
     return (
         <div class="docs">
         <Grid>
+        </Grid>
+        <Grid>
         <Table striped condensed hover width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
             <tbody>
                 <tr>
-                    <td valign="top" width="20">
+                    <td valign="top" width="150px">
                         <Table striped condensed hover cols="1" rows="1" border="0" cellspacing="0" cellpadding="0" width="100%" height="100%">
                             <tbody>
                                 <tr>
                                     <td>
                                         <div class="menu">
-                                            <Link to="/docs/buildbot" class="menuItem">Build a chatbot</Link>
+                                        <Panel collapsible header="Chatbot">
+                                            <Link to="/docs//docs/buildbot" class="menuItem">Chatbot</Link>
+                                        </Panel>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
                                         <div class="menu">
-                                            <Link to="/docs/machinelearning" class="menuItem">Machine Learning</Link>
+                                        <Panel collapsible header="机器学习">
+                                        <ListGroup fill>
+                                            <ListGroupItem><Link to="/docs/machinelearning" class="menuItem">基本概念</Link></ListGroupItem>
+                                            <ListGroupItem><Link to="/docs/machinelearning" class="menuItem">学习方法</Link></ListGroupItem>
+                                            <ListGroupItem><Link to="/docs/machinelearning" class="menuItem">资源汇总</Link></ListGroupItem>
+                                        </ListGroup>
+                                        </Panel>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
                                         <div class="menu">
-                                            <Link to="/docs/deeplearning" class="menuItem">Deep Learning</Link>
+                                        <Panel collapsible header="深度学习">
+                                        <ListGroup fill>
+                                            <ListGroupItem><Link to="/docs/deeplearning" class="menuItem">基本概念</Link></ListGroupItem>
+                                            <ListGroupItem><Link to="/docs/deeplearning" class="menuItem">学习方法</Link></ListGroupItem>
+                                            <ListGroupItem><Link to="/docs/deeplearning" class="menuItem">资源汇总</Link></ListGroupItem>
+                                        </ListGroup>
+                                        </Panel>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
                                         <div class="menu">
-                                            <Link to="/docs/tensorflow"  class="menuItem">TensorFlow</Link>
+                                        <Panel collapsible header="TensorFlow">
+                                        <ListGroup fill>
+                                            <ListGroupItem><Link to="/docs/tensorflow" class="menuItem">基本概念</Link></ListGroupItem>
+                                            <ListGroupItem><Link to="/docs/tensorflow" class="menuItem">学习方法</Link></ListGroupItem>
+                                            <ListGroupItem><Link to="/docs/tensorflow" class="menuItem">资源汇总</Link></ListGroupItem>
+                                        </ListGroup>
+                                        </Panel>
                                         </div>
                                     </td>
                                 </tr>
@@ -63,8 +72,8 @@ const Docs = () => {
                 </tr>
             </tbody>
         </Table>
-            <footer>Copyright &copy; zzbslayer.club
-            </footer>
+        <footer>Copyright &copy; zzbslayer.club
+        </footer>
         </Grid>
         </div>
     )

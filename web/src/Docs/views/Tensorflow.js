@@ -7,7 +7,8 @@ export default () => (
         <tr>
             <td padding="10px" valign="top" align="left">
                 <h1>TensorFlow</h1>
-                <p>I don't know what to put here.</p>
+                <p><a href="www.tensorflow.org">官方网址</a></p>
+                <p><a href="http://www.tensorfly.cn/">中文社区</a></p>
             </td>
         </tr>
         </tbody>
