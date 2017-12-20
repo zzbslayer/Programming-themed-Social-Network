@@ -27,7 +27,7 @@ const Docs = () => {
                                     <td>
                                         <div class="menu">
                                         <Panel style={{padding:"0px", margin:"0px"}} collapsible header="Chatbot">
-                                            <Link to="/docs//docs/buildbot" class="menuItem">Chatbot</Link>
+                                            <Link to="/docs/buildbot" class="menuItem">Chatbot</Link>
                                         </Panel>
                                         </div>
                                         <div class="menu">
