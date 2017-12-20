@@ -1,5 +1,5 @@
 import React from 'react'
-import {Table, Grid, Panel,ListGroup , ListGroupItem, MenuItem} from "react-bootstrap"
+import {Table, Grid, Panel,ListGroup , ListGroupItem} from "react-bootstrap"
 import Machinedocs from './Machinedocs'
 import Buildbot from './Buildbot'
 import Deeplearning from "./Deeplearning";
@@ -26,12 +26,12 @@ const Docs = () => {
                                 <tr>
                                     <td>
                                         <div class="menu">
-                                        <Panel collapsible header="Chatbot">
+                                        <Panel style={{padding:"0px", margin:"0px"}} collapsible header="Chatbot">
                                             <Link to="/docs//docs/buildbot" class="menuItem">Chatbot</Link>
                                         </Panel>
                                         </div>
                                         <div class="menu">
-                                        <Panel collapsible header="机器学习">
+                                        <Panel style={{padding:"0px", margin:"0px"}} collapsible header="机器学习">
                                         <ListGroup fill>
                                             <ListGroupItem><Link to="/docs/machinelearning" class="menuItem">基本概念</Link></ListGroupItem>
                                             <ListGroupItem><Link to="/docs/machinelearning" class="menuItem">学习方法</Link></ListGroupItem>
@@ -40,7 +40,7 @@ const Docs = () => {
                                         </Panel>
                                         </div>
                                         <div class="menu">
-                                        <Panel collapsible header="深度学习">
+                                        <Panel style={{padding:"0px", margin:"0px"}} collapsible header="深度学习">
                                         <ListGroup fill>
                                             <ListGroupItem><Link to="/docs/deeplearning" class="menuItem">基本概念</Link></ListGroupItem>
                                             <ListGroupItem><Link to="/docs/deeplearning" class="menuItem">学习方法</Link></ListGroupItem>
@@ -49,7 +49,7 @@ const Docs = () => {
                                         </Panel>
                                         </div>
                                         <div class="menu">
-                                        <Panel collapsible header="TensorFlow">
+                                        <Panel style={{padding:"0px", margin:"0px"}} collapsible header="TensorFlow">
                                         <ListGroup fill>
                                             <ListGroupItem><Link to="/docs/tensorflow" class="menuItem">基本概念</Link></ListGroupItem>
                                             <ListGroupItem><Link to="/docs/tensorflow" class="menuItem">学习方法</Link></ListGroupItem>
