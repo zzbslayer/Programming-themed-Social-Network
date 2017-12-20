@@ -1,7 +1,8 @@
 .menu {
 	text-align: center;
-	padding-top: 8px;
-	padding-bottom: 8px;
+    padding: "0px";
+    border: "0px";
+    margin: "0px";
 }
 
 .menuItem {

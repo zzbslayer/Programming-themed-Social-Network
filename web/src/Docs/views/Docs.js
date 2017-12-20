@@ -1,40 +1,61 @@
 import React from 'react'
-import {Table} from "react-bootstrap"
-import styles from "./Docs.css"
+import {Table, Grid, Panel,ListGroup , ListGroupItem} from "react-bootstrap"
+import Machinedocs from './Machinedocs'
+import Buildbot from './Buildbot'
+import Deeplearning from "./Deeplearning";
+import Tensorflow from "./Tensorflow";
+import {
+    Route,
+    Link
+} from 'react-router-dom'
+import Introduction from "./Introduction";
+import './Docs.css'
+
 const Docs = () => {
     return (
         <div class="docs">
+        <Grid>
+        </Grid>
+        <Grid>
         <Table striped condensed hover width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
             <tbody>
                 <tr>
-                    <td valign="top" width="20">
+                    <td valign="top" width="150px">
                         <Table striped condensed hover cols="1" rows="1" border="0" cellspacing="0" cellpadding="0" width="100%" height="100%">
                             <tbody>
                                 <tr>
                                     <td>
                                         <div class="menu">
-                                            <a class="menuItem">Build a chatbot</a>
+                                        <Panel style={{padding:"0px", margin:"0px"}} collapsible header="Chatbot">
+                                            <Link to="/docs//docs/buildbot" class="menuItem">Chatbot</Link>
+                                        </Panel>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
                                         <div class="menu">
-                                            <a class="menuItem">Machine Learning</a>
+                                        <Panel style={{padding:"0px", margin:"0px"}} collapsible header="机器学习">
+                                        <ListGroup fill>
+                                            <ListGroupItem><Link to="/docs/machinelearning" class="menuItem">基本概念</Link></ListGroupItem>
+                                            <ListGroupItem><Link to="/docs/machinelearning" class="menuItem">学习方法</Link></ListGroupItem>
+                                            <ListGroupItem><Link to="/docs/machinelearning" class="menuItem">资源汇总</Link></ListGroupItem>
+                                        </ListGroup>
+                                        </Panel>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
                                         <div class="menu">
-                                            <a class="menuItem">Deep Learning</a>
+                                        <Panel style={{padding:"0px", margin:"0px"}} collapsible header="深度学习">
+                                        <ListGroup fill>
+                                            <ListGroupItem><Link to="/docs/deeplearning" class="menuItem">基本概念</Link></ListGroupItem>
+                                            <ListGroupItem><Link to="/docs/deeplearning" class="menuItem">学习方法</Link></ListGroupItem>
+                                            <ListGroupItem><Link to="/docs/deeplearning" class="menuItem">资源汇总</Link></ListGroupItem>
+                                        </ListGroup>
+                                        </Panel>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
                                         <div class="menu">
-                                            <a class="menuItem">TensorFlow</a>
+                                        <Panel style={{padding:"0px", margin:"0px"}} collapsible header="TensorFlow">
+                                        <ListGroup fill>
+                                            <ListGroupItem><Link to="/docs/tensorflow" class="menuItem">基本概念</Link></ListGroupItem>
+                                            <ListGroupItem><Link to="/docs/tensorflow" class="menuItem">学习方法</Link></ListGroupItem>
+                                            <ListGroupItem><Link to="/docs/tensorflow" class="menuItem">资源汇总</Link></ListGroupItem>
+                                        </ListGroup>
+                                        </Panel>
                                         </div>
                                     </td>
                                 </tr>
@@ -42,24 +63,18 @@ const Docs = () => {
                         </Table>
                     </td>
                     <td colspan="2">
-                        <Table striped condensed hover border="0" cellspacing="0" cellpadding="0" width="100%" height="100%">
-                            <tbody>
-                                <tr>
-                                    <td padding="10px" valign="top" align="left">
-                                        <h1>EZ AI</h1>
-                                        <p>I don't know what to put here.</p>
-                                        <p><a href="tutorial/machine-learning1.pptx" download="machine-learning1.pptx">machine learning1</a></p>
-                                        <p><a href="tutorial/machine-learning2.pdf" download="machine-learning2.pdf">machine learning2</a></p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </Table>
+                        <Route exact path="/docs" component={Introduction} />
+                        <Route path="/docs/buildbot" component={Buildbot} />
+                        <Route path="/docs/machinelearning" component={Machinedocs} />
+                        <Route path="/docs/deeplearning" component={Deeplearning} />
+                        <Route path="/docs/tensorflow" component={Tensorflow} />
                     </td>
                 </tr>
             </tbody>
         </Table>
         <footer>Copyright &copy; zzbslayer.club
         </footer>
+        </Grid>
         </div>
     )
 };
