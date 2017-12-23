@@ -9,6 +9,13 @@
     font-family: zFont2, 'zFont2';
 }
 
+button > a {
+    color:white;
+}
+
+button > a:hover {
+    color:white;
+}
 
 @font-face
 {

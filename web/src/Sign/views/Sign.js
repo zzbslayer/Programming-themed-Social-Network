@@ -1,5 +1,11 @@
 import React from 'react'
 import {Grid, Row, Col, Button} from 'react-bootstrap'
+import Signin from './Signin'
+import Signup from './Signup'
+import {
+    Route,
+    Link
+} from 'react-router-dom'
 
 const Sign = () => {
     return (
@@ -12,8 +18,12 @@ const Sign = () => {
                 聊天机器人可以体验AI，祝您使用愉快。</h2>
             </Row>
             <Row style={{"text-align":"center"}}>
-                <Col md={6} xs={6}><Button bsStyle="primary" bsSize="large">Sign in</Button></Col>
-                <Col md={6} xs={6}><Button bsStyle="success" bsSize="large">Sign up</Button></Col>
+                <Col md={6} xs={6}><Button bsStyle="primary" bsSize="large"><Link to="/signin">Sign in</Link></Button></Col>
+                <Col md={6} xs={6}><Button bsStyle="success" bsSize="large"><Link to="/signup">Sign up</Link></Button></Col>
+            </Row>
+            <Row>
+                <Route path="/signin" component={Signin}/>
+                <Route path="/signup" component={Signup}/>
             </Row>
         </Grid>
     )
