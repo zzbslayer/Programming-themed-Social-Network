@@ -9,7 +9,7 @@ class Chatwin extends React.Component {
     render() {
         return (
 
-            <div className="ChatArea">
+            <Row className="ChatArea">
 
                 {this.props.messages.map((M)=>{
                     return (
@@ -27,7 +27,7 @@ class Chatwin extends React.Component {
                     )
                 })}
 
-            </div>
+            </Row>
 
 
             )
