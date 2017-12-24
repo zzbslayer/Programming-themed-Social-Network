@@ -3,31 +3,33 @@
  */
 import React from 'react'
 import {connect} from 'react-redux'
-import {Table} from 'react-bootstrap'
+import {Row,ListGroup,ListGroupItem} from 'react-bootstrap'
 
 class Chatwin extends React.Component {
     render() {
         return (
-            <div>
-                <Table striped bordered condensed hover>
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Your message</th>
-                        <th>Bot's message</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {this.props.messages.map((M)=>{
-                        return (<tr key = {M.id}>
-                            <td>{M.id}</td>
-                            <td>{M.comment}</td>
-                            <td>{M.response}</td>
-                        </tr>)
-                    })}
-                    </tbody>
-                </Table>
-            </div>
+
+            <Row className="ChatArea">
+
+                {this.props.messages.map((M)=>{
+                    return (
+                        <ListGroup className="ChatBar" >
+                            <ListGroupItem className="ChatBar" style={{border :'none'}}>
+                                <img src={require('../icon/人对话.png')}></img>
+                                <span className="UserMessage" >{M.comment}</span>
+                            </ListGroupItem>
+
+                                <ListGroupItem className="ChatBar" style={{border :'none'}}>
+                                    <img src={require('../icon/机器人对话.png')}></img>
+                                    <span className="BotMessage" >{M.response}</span>
+                                </ListGroupItem>
+                        </ListGroup>
+                    )
+                })}
+
+            </Row>
+
+
             )
     }
 }

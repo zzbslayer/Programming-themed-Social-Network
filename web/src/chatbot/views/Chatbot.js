@@ -5,10 +5,12 @@ import React from 'react'
 import Chatwin from './Chatwin'
 import Send from './Sendmessage'
 import {Grid} from 'react-bootstrap'
-
+import  Head from  './Header'
+import  './Chat.css'
 const Chatbot = () => {
     return (
         <Grid>
+            <Head/>
             <Chatwin/>
             <hr/>
             <Send/>
