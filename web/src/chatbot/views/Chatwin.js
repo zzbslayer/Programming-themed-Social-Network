@@ -3,31 +3,41 @@
  */
 import React from 'react'
 import {connect} from 'react-redux'
-import {Table} from 'react-bootstrap'
+import {Table, Row,ListGroup,ListGroupItem} from 'react-bootstrap'
 
 class Chatwin extends React.Component {
     render() {
         return (
-            <div>
-                <Table striped bordered condensed hover>
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Your message</th>
-                        <th>Bot's message</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+ 
+            <Row>
+                <ListGroup >
+                {this.props.messages.map((M)=>{
+                    return (
+
+                        <ListGroupItem style={{border :'none',    width: '150px',
+                            height: '35px',
+                            position: 'relative',
+                            margin: ' auto 0',
+                            background: '#f8ac09',
+                            borderRadius: '5px'}}>{M.comment}</ListGroupItem>
+
+                    )
+                })}
                     {this.props.messages.map((M)=>{
-                        return (<tr key = {M.id}>
-                            <td>{M.id}</td>
-                            <td>{M.comment}</td>
-                            <td>{M.response}</td>
-                        </tr>)
+                        return (
+
+                            <ListGroupItem style={{border :'none',    width: '150px',
+                                height: '35px',
+                                position: 'relative',
+                                margin: ' auto 0',
+                                background: '#48eef8',
+                                borderRadius: '5px'}}>{M.response}</ListGroupItem>
+                    )
                     })}
-                    </tbody>
-                </Table>
-            </div>
+                </ListGroup>
+            </Row>
+
+
             )
     }
 }
