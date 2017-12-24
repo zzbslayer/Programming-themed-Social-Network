@@ -1,0 +1,30 @@
+.ChatArea {
+    background-image: url('../icon/背景.png');
+    background-repeat: repeat;
+
+}
+.ChatBar{
+    background-image: url('../icon/背景.png');
+    background-repeat: repeat;
+    margin:auto;
+}
+.UserMessage{
+    border :none;
+    width: 150px;
+    height: 35px;
+    position: relative;
+    padding:15px 15px 15px 15px;
+    margin:  20px auto 20px 20px;
+    background: #f8ac09;
+    borderRadius: 5px;
+}
+.BotMessage{
+    border :none;
+    width: 150px;
+    height: 35px;
+    position: relative;
+    padding:15px 15px 15px 15px;
+    margin:  20px auto 20px 12px;
+    background: #3adbf8;
+    borderRadius: 5px;
+}
