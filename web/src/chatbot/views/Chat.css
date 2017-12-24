@@ -16,7 +16,8 @@
     padding:15px 15px 15px 15px;
     margin:  20px auto 20px 20px;
     background: #f8ac09;
-    borderRadius: 5px;
+    border-radius: 5px;
+
 }
 .BotMessage{
     border :none;
@@ -26,5 +27,5 @@
     padding:15px 15px 15px 15px;
     margin:  20px auto 20px 12px;
     background: #3adbf8;
-    borderRadius: 5px;
+    border-radius: 5px;
 }
